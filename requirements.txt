@@ -16,4 +16,5 @@
 # This code was developed and tested on Python 3.10
 
 
-boto3==1.28.68
+boto3
+awscliv2

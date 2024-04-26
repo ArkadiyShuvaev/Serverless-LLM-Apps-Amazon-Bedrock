@@ -1,14 +1,13 @@
-import boto3
 import json
-import os
 import datetime
+import boto3
 from botocore.exceptions import ClientError
 
 
-class CloudWatch_Helper: 
+class CloudWatch_Helper:
 
     def __init__(self):
-        # Create a Boto3 client for the CloudWatch Logs service     
+        # Create a Boto3 client for the CloudWatch Logs service
         self.cloudwatch_logs_client = boto3.client('logs', region_name="us-west-2")
 
     def create_log_group(self, log_group_name):
@@ -56,4 +55,3 @@ class CloudWatch_Helper:
 
         except ClientError as e:
             print(f"Error fetching logs: {e}")
-

@@ -1,0 +1,25 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Sid": "AllowCreateLogStream",
+      "Effect": "Allow",
+      "Action": [
+        "logs:CreateLogStream"
+      ],
+      "Resource": [
+        "arn:aws:logs:eu-central-1:165819210796:log-group:/learning/serverless-llm-apps-amazon-bedrock:log-stream:model-invocations"
+      ]
+    },
+    {
+      "Sid": "AllowWriteToLogStream",
+      "Effect": "Allow",
+      "Action": [
+        "logs:PutLogEvents"
+      ],
+      "Resource": [
+        "arn:aws:logs:eu-central-1:165819210796:log-group:/learning/serverless-llm-apps-amazon-bedrock:log-stream:model-invocations"
+      ]
+    }
+  ]
+}

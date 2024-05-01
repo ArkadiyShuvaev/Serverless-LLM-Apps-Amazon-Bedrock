@@ -8,7 +8,8 @@ class CloudWatch_Helper:
 
     def __init__(self):
         # Create a Boto3 client for the CloudWatch Logs service
-        self.cloudwatch_logs_client = boto3.client('logs', region_name="us-west-2")
+        self.__session = boto3.Session(profile_name="default")
+        self.cloudwatch_logs_client = self.__session.client('logs', region_name="eu-central-1")
 
     def create_log_group(self, log_group_name):
         try:
